@@ -12,17 +12,41 @@
 </head>
 <body>
   <div id="homeEnter">
+    <div class="betterExperience">activez votre <em>son</em> pour une meilleur expérience</div>
     <h1>
         <span class="titleContainer">
-            <span data-before="kevinkevinkevin" data-after="kevinkevinkevin">Kevin</span>
+            <span data-before="developpeurweb" data-after="developpeurweb">Kevin</span>
         </span>
         <span class="titleContainer">
-            <span data-before="rousseletrousseletrousselet" data-after="rousseletrousseletrousselet">Rousselet</span>
+            <span data-before="developpeurweb" data-after="developpeurweb">Rousselet</span>
         </span>
-        <div class="label">Click to <em>enter</em></div>
-       
+        <div class="label" id="startTour" pagetoload="home">Cliquez pour <em>commencer</em></div>    
     </h1>
   </div>
+
+
+
+<div id="home" hidden>
+    coucou
+    <span pagetoload="contact" id="contactLink">Contact</span>
+</div>
+
+<div id="contact" style="display:none">
+    <div class="betterExperience"></div>
+    <h1>
+        <span class="titleContainer">
+            <span data-before="developpeurweb" data-after="developpeurweb">Kevin</span>
+        </span>
+        <span class="titleContainer">
+            <span data-before="developpeurweb" data-after="developpeurweb">Rousselet</span>
+        </span>
+        <div class="label" id="startTour" pagetoload="home">Cliquez pour <em>commencer</em></div>    
+    </h1>
+  </div>
+
+<div id="transition"></div>
+
+
   <script src="./assets/js/app.js"></script>
 </body>
 </html>

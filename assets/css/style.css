@@ -17,6 +17,32 @@
     -o-transform: translateY(0);
   }
 }
+/**************
+ * TRANSITION *
+ **************/
+#transition {
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: #000000;
+  transition: all 0.5;
+  -webkit-transition: all 0.5;
+  -moz-transition: all 0.5;
+  -ms-transition: all 0.5;
+  -o-transition: all 0.5;
+}
+
+.open {
+  height: 100vh !important;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+}
+
 * {
   text-rendering: optimizeLegibility;
 }
@@ -31,7 +57,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
-#homeEnter {
+#homeEnter, #contact {
   width: 100%;
   height: 100vh;
   display: flex;
@@ -39,14 +65,32 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   overflow: hidden;
 }
-#homeEnter h1 {
+#homeEnter .betterExperience, #contact .betterExperience {
+  left: 4vw;
+  top: 35px;
+  text-align: left;
+  z-index: 5;
+  height: 22px;
+  position: absolute;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+#homeEnter .betterExperience em, #contact .betterExperience em {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000000;
+  -webkit-text-fill-color: transparent;
+  font-style: inherit;
+}
+#homeEnter h1, #contact h1 {
   float: left;
   position: relative;
 }
-#homeEnter .titleContainer {
+#homeEnter .titleContainer, #contact .titleContainer {
   display: block !important;
 }
-#homeEnter .titleContainer span {
+#homeEnter .titleContainer span, #contact .titleContainer span {
   display: inline-block;
   font-family: "Fira Sans Extra Condensed", sans-serif;
   color: #000000;
@@ -58,21 +102,21 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-text-stroke-width: 0.15vw;
   position: relative;
 }
-#homeEnter .titleContainer:nth-child(1) span {
+#homeEnter .titleContainer:nth-child(1) span, #contact .titleContainer:nth-child(1) span {
   animation-delay: 0.2s;
 }
-#homeEnter .titleContainer:nth-child(1) span::before {
+#homeEnter .titleContainer:nth-child(1) span::before, #contact .titleContainer:nth-child(1) span::before {
   content: attr(data-before);
   font-weight: lighter;
   position: absolute;
-  left: -50.5362vw;
+  left: -52.5362vw;
   top: 0;
   font-size: 7.5362vw;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: rgba(0, 0, 0, 0.12);
   -webkit-text-fill-color: transparent;
 }
-#homeEnter .titleContainer:nth-child(1) span:after {
+#homeEnter .titleContainer:nth-child(1) span:after, #contact .titleContainer:nth-child(1) span:after {
   content: attr(data-after);
   font-weight: lighter;
   position: absolute;
@@ -83,21 +127,21 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-text-stroke-color: rgba(0, 0, 0, 0.12);
   -webkit-text-fill-color: transparent;
 }
-#homeEnter .titleContainer:nth-child(2) span {
+#homeEnter .titleContainer:nth-child(2) span, #contact .titleContainer:nth-child(2) span {
   animation-delay: 0.4s;
 }
-#homeEnter .titleContainer:nth-child(2) span::before {
+#homeEnter .titleContainer:nth-child(2) span::before, #contact .titleContainer:nth-child(2) span::before {
   content: attr(data-before);
   font-weight: lighter;
   position: absolute;
-  left: -96.5362vw;
+  left: -52.5362vw;
   top: 0;
   font-size: 7.5362vw;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: rgba(0, 0, 0, 0.12);
   -webkit-text-fill-color: transparent;
 }
-#homeEnter .titleContainer:nth-child(2) span:after {
+#homeEnter .titleContainer:nth-child(2) span:after, #contact .titleContainer:nth-child(2) span:after {
   content: attr(data-after);
   font-weight: lighter;
   position: absolute;
@@ -108,7 +152,7 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-text-stroke-color: rgba(0, 0, 0, 0.12);
   -webkit-text-fill-color: transparent;
 }
-#homeEnter .label {
+#homeEnter .label, #contact .label {
   position: absolute;
   right: 0;
   text-align: left;
@@ -121,7 +165,7 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-text-stroke-color: transparent;
   -webkit-text-fill-color: #000000;
 }
-#homeEnter .label em {
+#homeEnter .label em, #contact .label em {
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #000000;
   -webkit-text-fill-color: transparent;
